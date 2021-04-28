@@ -1,0 +1,89 @@
+.header {
+    max-width: 1290px;
+    width: 100%;
+    border-bottom: 1px solid #E5E5E5;
+
+    &_wrapper {
+        width: 95%;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        margin: 0 auto; 
+        padding: 15px 0 20px 0;
+        .logo_zen {
+            margin-right: 22px;
+        }
+    }
+    
+    &_rate_items {
+        display: flex;
+        justify-content: center;
+        padding-left: 40px;
+    }
+    &_rate_item {
+        list-style-type: none;
+    }
+
+    .rate_item_link {
+        text-decoration: none;
+        color: #000000;
+        font-size: 16px;
+        line-height: 22px;
+
+        &:hover{
+            color: green;
+        }
+        &:focus{
+            color: red;
+            outline: none;
+        }
+
+    }
+    .rate_Business {
+        padding-left: 22px;
+    }
+
+    .header_nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-left: auto;
+        .nav_item {
+            margin-right: 30px;
+            list-style-type: none;
+            &_link {
+                text-decoration: none;
+                color: #000000;
+                font-size: 16px;
+                line-height: 22px;
+
+                &:hover{
+                    color: green;
+                }
+                &:focus{
+                    color: red;
+                    outline: none;
+                }
+            }
+        }
+        .nav_item:first-child {
+            margin-left: 120px;
+        }
+        .nav_btn {
+            background-color: #fff;
+            box-sizing: border-box;
+            border: 1px solid #000;
+            border-radius: 48px;
+            padding: 12px 32px;
+            font-size: 18px;
+            &:hover{
+                box-shadow: 0 0 5px  #000;
+            }
+            &:focus{
+                box-shadow: 0 0 5px  #000;
+                outline: none;
+            }
+        }
+    }
+
+}

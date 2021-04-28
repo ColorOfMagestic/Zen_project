@@ -1,0 +1,41 @@
+.mastercard {
+    display: flex;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+    margin-bottom: 100px;
+
+    &_content {
+        margin-bottom: 180px;
+        margin-right: 140px;
+        padding-top: 126px;
+        padding-left: 45px;
+        max-width: 475px;  
+    }
+    .mastercard_title::after{
+        content:url(../img/®.png);
+        position: relative;
+        top: -25px;
+    }
+
+    .mastercard_btn {
+        max-width: 87px;
+        margin-right: 20px;
+        padding: 14px 9px;
+        border: 2px solid #222;
+        border-radius: 5px;
+        outline: none;
+        &:hover {
+            opacity: 0.8;
+        }
+        &:focus {
+            box-shadow: 0 0 10px 2px #000;
+        }
+    }
+
+    .mastercard_img{
+        position: absolute;
+        top: -73px;
+    }
+        
+    
+}

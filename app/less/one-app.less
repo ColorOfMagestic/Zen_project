@@ -1,0 +1,30 @@
+.one-app {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+    margin-top: 180px;
+    margin-bottom: 60px;
+    &_content {
+        padding-top: 110px;
+    }
+    &_title {
+        width: 70%;
+        margin: 0;
+        padding-bottom: 19px;
+    }
+    &_text {
+        display: inline-block;
+        max-width: 475px;
+        margin: 0;
+        margin-right: 140px;
+        padding-bottom: 15px;
+    }
+    &_text:last-of-type {
+        margin-bottom: 110px;
+    }
+
+    .one-app_img {
+        position: absolute;
+        top: -67px;
+    }
+}
