@@ -1,5 +1,4 @@
 .header {
-    max-width: 1290px;
     width: 100%;
     border-bottom: 1px solid #E5E5E5;
 
@@ -68,11 +67,13 @@
             margin-left: 120px;
         }
         .nav_btn {
+            display: block;
+            max-width: 130px;
+            max-height: 48px;
+            padding: 12px 32px;
             background-color: #fff;
-            box-sizing: border-box;
             border: 1px solid #000;
             border-radius: 48px;
-            padding: 12px 32px;
             font-size: 18px;
             &:hover{
                 box-shadow: 0 0 5px  #000;
@@ -84,4 +85,23 @@
         }
     }
 
+}
+@media screen and (min-width: @tablet) and (max-width: @laptop) {
+    .header  {
+        &_rate_items {
+            flex-direction: column;
+            .rate_Business {
+                padding-left: 0;
+            }
+        }
+        .header_nav {
+            .nav_btn {
+                max-width: 100px;
+                max-height: 36px;
+                padding: 8px 20px;
+                font-size: 14px;
+     
+            }
+        } 
+    }
 }
