@@ -13,6 +13,7 @@
 
 @title: 36px;
 @title_tablet: 24px;
+@title_mobile: 20px;
 @list-item: 14px;
 
 
@@ -67,8 +68,15 @@ img {
 
 }
 
-// @media screen and (min-width: @mobile) and (max-width: @tablet) {
-// }
+@media screen and (min-width: @mobile) and (max-width: @tablet) {
+    .wrapper  {
+        padding: 0 20px;
+    }
+    .title {
+        font-size: @title_mobile;
+        line-height: 20px;
+    }
+}
 @media screen and (min-width: @tablet) and (max-width: @laptop) {
     .wrapper  {
         padding: 0 30px;
