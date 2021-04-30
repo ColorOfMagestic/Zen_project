@@ -1,7 +1,7 @@
 
 @mobile: 320px;
 @tablet: 767px;
-@laptop: 1023px;
+@laptop: 1024px;
 
 
 
@@ -11,8 +11,9 @@
     src: url("../fonts/Nunito-Regular.ttf");
 }
 
-@title:36px;
-@list-item:14px;
+@title: 36px;
+@title_tablet: 24px;
+@list-item: 14px;
 
 
 body{
@@ -71,6 +72,10 @@ img {
 @media screen and (min-width: @tablet) and (max-width: @laptop) {
     .wrapper  {
         padding: 0 30px;
+    }
+    .title {
+        font-size: @title_tablet;
+        line-height: 24px;
     }
 }
 
