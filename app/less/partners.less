@@ -4,8 +4,9 @@
         text-align: center; 
     }
     .partners_text {
-        width: 585px;
+        max-width: 585px;
         margin: 0 auto;
+        margin-top: 20px;
         margin-bottom: 46px;
         text-align: center; 
         line-height: 25px;
@@ -14,25 +15,42 @@
         display: block;
         margin: 0 auto;
         margin-bottom: 70px;
-        width: 237px;
+        max-width: 237px;
         padding: 12px 32px;
+        font-size: 16px;
         line-height: 25px;
+        border: 1px solid #aaa;
         border-radius: 48px;
         outline: none;
-        &:hover{
+        &:hover {
             box-shadow: 0 0 3px 0 #000;
-            color: green;
         }
-        &:focus{
-            color: red;
-            outline: none;
+        &:focus {
+            box-shadow: 0 0 3px 0 #000;
+
         }
     }
     .parters_logo-link {
         display: grid;
         grid-template-columns: repeat(4, 1fr);
-        grid-template-rows: repeat(4, auto);
+        grid-template-rows: repeat(2, auto);
         margin: 0 120px;
         margin-bottom: 172px;
+    }
+}
+
+@media screen and (min-width: @mobile) and (max-width: @tablet ){
+    .partners  {
+        .partners_text {
+            margin-top: 20px;
+            margin-bottom: 26px;
+        }
+        .partners_btn {
+            margin-bottom: 30px;
+        }
+        .parters_logo-link  {
+            margin: 0;
+            gap: 10px;
+        }
     }
 }
