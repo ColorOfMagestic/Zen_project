@@ -32,7 +32,7 @@
         margin-right: 20px;
     } 
 
-    .mastercard_img{
+    .mastercard_img {
         position: relative;
         top: -73px;
     }
@@ -58,4 +58,20 @@
 
     }
     
+}
+@media screen and (min-width: @tablet) and (max-width: @laptop) {
+    .mastercard  {
+        margin-bottom: 0;
+        &_content {
+            margin-bottom: 0;
+            .mastercard_text {
+                padding-right: 25px;
+            }
+
+        }
+        .mastercard_img  {
+            top: 0;
+            margin-top: 15px;
+        }
+    }
 }
