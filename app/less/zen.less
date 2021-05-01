@@ -1,11 +1,11 @@
 .zen {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto auto;
+    grid-template-rows: auto;
     margin-top: 219px;
     margin-bottom: 120px;
     .zen_content {
-        width: 455px;
+        max-width: 455px;
         margin-top: 75px;
         margin-bottom: 100px;
         .zen_text {
@@ -22,13 +22,32 @@
        
         
     }
-    .img--top {
+    
+    .zen_img {
         position: relative;
-        .zen_img {
-            position: absolute;
-            top: -88px;
-        }
+        top: -88px;
     }
+    
 
 
+}
+@media screen and (min-width: @mobile) and (max-width: @tablet) {
+    .zen {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        margin-top: 0;
+        margin-bottom: 120px;
+        .zen_content {
+            grid-row: 2;
+            margin-top: 30px;
+            margin-bottom: 0;
+
+        }
+        .zen_img {
+            position: relative;
+            top: 0;
+            margin-top: 30px;
+        }
+    
+    }
 }
