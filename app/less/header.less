@@ -1,70 +1,78 @@
 .header {
+    position: relative;
     width: 100%;
     border-bottom: 1px solid #E5E5E5;
-
     &_wrapper {
         display: flex;
         justify-content: flex-start;
         align-items: center;
         margin: 0 auto; 
+    }
+    .logo_block {
+        display: flex;
+        align-items: center;
         .logo_zen {
             margin-right: 22px;
         }
     }
-    
-    &_rate_items {
+
+    .header_menu--mobile {
+        display: flex;
+        width: 90%;
+        margin-left: auto;
+
+    .header_rate {
+        width: 20%;
         display: flex;
         justify-content: center;
         padding-left: 40px;
-    }
-    &_rate_item {
-        list-style-type: none;
-    }
-
-    .rate_item_link {
-        text-decoration: none;
-        color: #000000;
-        font-size: 16px;
-        line-height: 22px;
-
-        &:hover{
-            color: green;
-        }
-        &:focus{
-            color: red;
-            outline: none;
-        }
-
-    }
-    .rate_Business {
-        padding-left: 22px;
-    }
-
-    .header_nav {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        margin-left: auto;
-        .nav_item {
-            margin-right: 30px;
+        .header_rate_item {
             list-style-type: none;
-            &_link {
-                text-decoration: none;
-                color: #000000;
-                font-size: 16px;
-                line-height: 22px;
-
-                &:hover{
-                    color: green;
-                }
-                &:focus{
-                    color: red;
-                    outline: none;
+        }
+    
+        .rate_item_link {
+            text-decoration: none;
+            color: #000000;
+            font-size: 16px;
+            line-height: 22px;
+    
+            &:hover{
+                color: green;
+            }
+            &:focus{
+                color: red;
+                outline: none;
+            }
+    
+        }
+        .rate_Business {
+            padding-left: 22px;
+        }
+    }
+        .header_nav {
+            width: 45%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-left: auto;
+            .nav_item {
+                margin-right: 30px;
+                list-style-type: none;
+                &_link {
+                    text-decoration: none;
+                    color: #000000;
+                    font-size: 16px;
+                    line-height: 22px;
+    
+                    &:hover{
+                        color: green;
+                    }
+                    &:focus{
+                        color: red;
+                        outline: none;
+                    }
                 }
             }
-        }
-        .nav_item:first-child {
-            margin-left: 120px;
         }
         .nav_btn {
             display: block;
@@ -83,12 +91,17 @@
                 outline: none;
             }
         }
+
     }
+    .header_menu--mobile_button {
+        display: none;
+    }
+    
 
 }
 @media screen and (min-width: @tablet) and (max-width: @laptop) {
     .header  {
-        &_rate_items {
+        .header_rate  {
             flex-direction: column;
             .rate_Business {
                 padding-left: 0;
@@ -103,5 +116,159 @@
      
             }
         } 
+    }
+}
+@media screen and (min-width: @mobile) and (max-width: @tablet) {
+    .header {
+        .logo_block {
+            margin: 20px 0;
+            margin-right: auto;
+            
+        }
+        .header_menu--mobile {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            display: flex;
+            justify-content: start;
+            width: 50%;
+            height: 100vh;
+            flex-direction: column;
+            margin-left: auto;
+            background-color: rgba(170, 170, 170, 0.8);
+            z-index: 2;
+            .header_rate {
+                width: 45%;
+                flex-direction: column;
+                align-items: center;
+                margin: 0 auto;
+                margin-top: 100px;
+                margin-bottom: 40px;
+                padding-left: 0;
+                .header_rate_item  {
+                    margin-bottom: 10px;
+                }
+                .rate_item_link {
+                    color: #fff;
+                }
+                .rate_Business {
+                    padding-left: 0;
+                }
+            
+            }
+            .header_nav {
+                flex-direction: column;
+                width: 45%;
+                margin: 0 auto;
+                .nav_item {
+                    margin-right: 0;
+                    margin-bottom: 10px;
+                }
+            } 
+            .nav_btn {
+                width: 100%;
+                margin: 0 auto;
+            }
+
+        }
+        .header_menu--mobile__active {
+            transform: translateX(0%);
+            transition-duration: 1.5s;
+        }
+        .header_menu--mobile__close {
+            transform: translateX(100%);
+            transition-duration: 1.5s;
+
+
+        }
+        .header_menu--mobile_button {
+            display: block;
+            width: 40px;
+            height: 40px;
+            background-color: transparent;
+            border: none;
+            border-radius: 4px;
+            outline: none;
+            .button_decoration {
+                position: relative;
+                display: block;
+                width: 20px;
+                height: 2px;
+                background-color: #000;
+                margin: 0 auto;
+                &:last-child {
+                    margin-top: -2px;
+                }
+            }
+            .button_decoration:not(:last-of-type) {
+                &::after,
+                &::before {
+                    content: "";
+                    display: block;
+                    width: 20px;
+                    height: 2px;
+                }
+                &::before {
+                    position: absolute;
+                    top: -8px;
+                    background-color: #000;
+
+                }
+                &::after {
+                    position: absolute;
+                    top: 8px;
+                    background-color: #000;
+                }
+            }
+        }
+        .header_menu--mobile_button__close {
+            display: block;
+            width: 40px;
+            height: 40px;
+            background-color: transparent;
+            border: none;
+            border-radius: 4px;
+            outline: none;
+            z-index: 5;
+
+            .button_decoration {
+                position: relative;
+                display: block;
+                width: 20px;
+                height: 2px;
+                background-color: transparent;
+                margin: 0 auto;
+                &:last-child {
+                    margin-top: -2px;
+                }
+            }
+            .button_decoration:not(:last-of-type) {
+                &::after,
+                &::before {
+                    content: "";
+                    display: block;
+                    width: 20px;
+                    height: 2px;
+
+                }
+                &::before {
+                    position: absolute;
+                    top: 0;
+                    transform: rotate(45deg);
+                    transition-duration: 0.5s;
+                    background-color: #000;
+
+                }
+                &::after {
+                    // position: absolute;
+                    // top: 0;
+                    transform: rotate(-45deg);
+                    transition-duration: 0.5s;
+                    background-color: #000;
+                }
+            }
+
+        }
     }
 }

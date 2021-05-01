@@ -10,18 +10,22 @@
   <header class="header">
     <div class="wrapper">
       <div class="header_wrapper">
-        <img class="logo_zen" src="./img/Zen_logo.png" alt="Логотип Zen">
-        <img class="logo_master" src="./img/mastercard logo.png" alt="Логотип Mastercard">
-        <div class="header_rates">
-        <ul class="header_rate_items">
-          <li class="header_rate_item rate_Personal">
-            <a class="rate_item_link" href="#">Personal</a>
-            </li>
-          <li class="header_rate_item rate_Business">
-            <a class="rate_item_link"  href="#">Business</a>
-            </li>
-        </ul>
+        <div class="logo_block">
+          <img class="logo_zen" src="./img/Zen_logo.png" alt="Логотип Zen">
+          <img class="logo_master" src="./img/mastercard logo.png" alt="Логотип Mastercard">
         </div>
+        <div class="header_menu--mobile 
+        header_menu--mobile__close">
+        
+          <ul class="header_rate">
+            <li class="header_rate_item rate_Personal">
+              <a class="rate_item_link" href="#">Personal</a>
+              </li>
+            <li class="header_rate_item rate_Business">
+              <a class="rate_item_link"  href="#">Business</a>
+              </li>
+          </ul>
+      
         <nav class="header_nav">
           <li class="nav_item">
             <a class="nav_item_link" href="#">Zenefits</a>
@@ -32,8 +36,14 @@
           <li class="nav_item">
             <a class="nav_item_link" href="#">Pricing</a>
             </li>
-            <button class="nav_btn">Get app</button>
-        </nav>
+          </nav>
+          <button class="nav_btn">Get app</button>
+        </div>
+        <button class="header_menu--mobile_button">
+          <span class="button_decoration"></span>
+          <span class="button_decoration"></span>
+        </button>
+        
       </div>
   </div>
   </header>
@@ -319,4 +329,5 @@
 
 
 </body>
+<script src="js/main.min.js"></script>
 </html>
