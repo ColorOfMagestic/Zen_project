@@ -1,10 +1,11 @@
 .boost {
-    display: flex;
+    position: relative;
+    display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto;
     margin-top: 111px;
     .boost_content {
-        padding-left: 135px;
+        margin: 0 auto;
         margin-bottom: 110px;
 
 
@@ -21,13 +22,26 @@
             
         }
     }
-    .img--top {
+    .boost_img {
         position: relative;
-        width: 50%;
-        .boost_img {
-            position: absolute;
-            top: -99px;
-        }
+        top: -99px;
     }
-   
+}
+
+@media screen and (min-width: @mobile) and (max-width: @tablet) {
+    .boost {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        margin-top: 0;
+        .boost_content {
+            margin-bottom: 0;
+            .boost_title {
+                padding-top: 60px;
+            }
+        }
+        .boost_img {
+            top: 0;
+        } 
+    }
 }
