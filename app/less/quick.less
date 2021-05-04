@@ -27,8 +27,8 @@
     }
     .quick_btn {
         box-sizing: border-box;
-        width: 168px;
-        display: block;
+        max-width: 168px;
+        display: inline-block;
         padding: 8px 15px;
         background-color: #000;
         color: #fff;
@@ -81,8 +81,10 @@
         &_content {
             margin-bottom: 30px;
         }
+        
 
         .quick_btn {
+            display: block;
             margin: 0 auto;
         }
         .quick_btn:not(:last-child) {
@@ -90,4 +92,26 @@
             margin-bottom: 20px;
         }
     }
+}
+@media screen and (min-width: @tablet) and (max-width: @laptop) {
+    .quick {
+        margin-top: 80px;
+        margin-bottom: 30px;
+        &_img {
+            top: 0;
+        }
+        &_content {
+            max-width: 300px;
+            margin-bottom: 30px;
+        }
+        &_title {
+            margin-top: 0;
+        }
+        .quick_btn {
+            display: inline-block;
+            max-width: 135px;
+
+        }
+        
+    } 
 }
