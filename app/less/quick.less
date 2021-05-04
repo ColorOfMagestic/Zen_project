@@ -1,7 +1,7 @@
 .quick {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto auto;
+    grid-template-rows: auto;
     margin-top: 120px;
     margin-bottom: 60px;
     &_img {
@@ -28,8 +28,7 @@
     .quick_btn {
         box-sizing: border-box;
         width: 168px;
-        display: inline-block;
-        margin-right: 20px;
+        display: block;
         padding: 8px 15px;
         background-color: #000;
         color: #fff;
@@ -67,7 +66,28 @@
         }
 
     }
+    .quick_btn:not(:last-child) {
+        margin-right: 20px;
+    }
+}
+@media screen and (min-width: @mobile) and (max-width: @tablet) {
+    .quick {
+        grid-template-columns: 1fr;
+        margin-top: 30px;
+        margin-bottom: 30px;
+        &_img {
+            top: 0;
+        }
+        &_content {
+            margin-bottom: 30px;
+        }
 
-
-
+        .quick_btn {
+            margin: 0 auto;
+        }
+        .quick_btn:not(:last-child) {
+            margin: 0 auto;
+            margin-bottom: 20px;
+        }
+    }
 }
