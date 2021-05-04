@@ -1,29 +1,42 @@
 .bay-shop {
-    display: flex;
+    display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto auto;
+    grid-template-rows: auto;
     padding-top: 50px;
     margin-bottom: 100px;
 
     .bay-shop_content {
-        min-width: 478px;
+        max-width: 478px;
         padding-top: 60px;
-        padding-left: 185px;
+        margin: 0 auto;
         margin-bottom: 100px;
         .bay-shop_title{
             margin: 0;
             padding-bottom: 22px;
-        }
+            }
         .bay-shop_text {
             margin: 0;
             margin-bottom: 10px;
 
-        }
+            }
     }
     .buy-shop_img {
-        position: absolute;
+        position: relative;
         top: -63px;
     }
-    
-
+}
+@media screen and (min-width: @mobile) and (max-width: @tablet) {
+    .bay-shop {
+        grid-template-columns:1fr;
+        padding-top: 50px;
+        margin-bottom: 0;
+        .bay-shop_content  {
+            padding-top: 30px;
+            margin-bottom: 0;
+        }
+        .buy-shop_img {
+            top: 0;
+            
+        }
+    }
 }
