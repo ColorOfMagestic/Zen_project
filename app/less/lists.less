@@ -1,7 +1,8 @@
 .lists {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: auto;
+    justify-items: center;
     padding-top: 47px;
     ul {
         list-style: none;
@@ -100,4 +101,9 @@
         text-decoration: none;
          color: #000;
     }
+}
+@media screen and (min-width: @mobile) and (max-width: @tablet) {
+  .lists {
+
+  }  
 }
