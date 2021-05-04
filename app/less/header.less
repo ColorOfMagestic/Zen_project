@@ -100,40 +100,11 @@
     
 
 }
-@media screen and (min-width: @tablet) and (max-width: @laptop) {
-    .header  {
-        &_wrapper {
-            padding: 10px 0;
-            .header_menu--mobile {
-                align-items: center;
-                .header_rate  {
-                    flex-direction: column;
-                    .rate_Business {
-                        padding-left: 0;
-                    }
-                }
-                .header_nav {
-                    width: 45%;
-                } 
-                .nav_btn {
-                    max-width: 100px;
-                    max-height: 36px;
-                    margin-top: 0;
-                    padding: 8px 20px;
-                    font-size: 16px;
-         
-                }
-        
-            }
-        }
-    }
-}
 @media screen and (min-width: @mobile) and (max-width: @tablet) {
     .header {
         .logo_block {
             margin: 20px 0;
-            margin-right: auto;
-            
+            margin-right: auto;            
         }
         .header_menu--mobile {
             position: absolute;
@@ -192,14 +163,12 @@
 
         }
         .header_menu--mobile__active {
-            transform: translateX(0%);
+            transform: translateX(-100%);
             transition-duration: 1.5s;
         }
         .header_menu--mobile__close {
-            transform: translateX(100%);
+            transform: translateX(-200%);
             transition-duration: 1.5s;
-
-
         }
         .header_menu--mobile_button {
             display: block;
@@ -288,6 +257,35 @@
                 }
             }
 
+        }
+    }
+}
+
+@media screen and (min-width: @tablet) and (max-width: @laptop) {
+    .header  {
+        &_wrapper {
+            padding: 10px 0;
+            .header_menu--mobile {
+                align-items: center;
+                .header_rate  {
+                    flex-direction: column;
+                    .rate_Business {
+                        padding-left: 0;
+                    }
+                }
+                .header_nav {
+                    width: 45%;
+                } 
+                .nav_btn {
+                    max-width: 100px;
+                    max-height: 36px;
+                    margin-top: 0;
+                    padding: 8px 20px;
+                    font-size: 16px;
+         
+                }
+        
+            }
         }
     }
 }

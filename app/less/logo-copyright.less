@@ -7,11 +7,26 @@
         grid-template-columns: 75% 25%;
         grid-template-rows: auto;
         .copyright {
+            max-width: 80%;
             margin-bottom: 65px;
-            padding-right: 188px;
             font-size: 12px;
             line-height: 15px;
             color: #aaa;
         }
+    }
+}
+@media screen and (min-width: @mobile) and (max-width: @tablet) {
+    .logo-copyright {
+        .logo-copyright_wrapper {
+            grid-template-columns: 1fr;
+            .copyright {
+                max-width: 100%;
+                margin-bottom: 30px;
+            }
+            .logo-copyright_img {
+                margin-bottom: 30px;
+            }
+        }
+ 
     }
 }
